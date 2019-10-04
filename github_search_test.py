@@ -9,7 +9,7 @@ class GithubSearchTest(unittest.TestCase):
         self.options = Options()
         self.options.add_argument('--headless')
         self.options.add_argument('--disable-gpu')
-        self.driver = webdriver.Chrome("./chromedriver")
+        self.driver = webdriver.Remote(command_executor='http://18.232.75.227:8080:4444',desired_capabilities={'browserName': 'firefox', 'javascriptEnabled': True})        
         self.base_url = "https://github.com"
 
 
