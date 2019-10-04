@@ -10,7 +10,8 @@ class GithubWatchRepoTest(unittest.TestCase):
         self.options = Options()
         self.options.add_argument('--headless')
         self.options.add_argument('--disable-gpu')
-        self.driver = webdriver.Chrome("./chromedriver")
+        # self.driver = webdriver.Chrome("./chromedriver")
+        self.driver=webdriver.PhantomJS()
         self.base_url = "https://github.com"
 
 
