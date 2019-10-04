@@ -23,7 +23,7 @@ class GithubSearchTest(unittest.TestCase):
         search_box = driver.find_element_by_name("q")
         search_box.send_keys("selenium")
         search_box.send_keys(Keys.RETURN)
-        assert "We’ve found" in driver.page_source
+        assert "We've found" in driver.page_source
 
 
     def test_github_repo_search_with_invalid_string(self):
