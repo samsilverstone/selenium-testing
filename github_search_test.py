@@ -1,11 +1,15 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
 
 class GithubSearchTest(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.PhantomJS()
+        self.options = Options()
+        self.options.add_argument('--headless')
+        self.options.add_argument('--disable-gpu')
+        self.driver = webdriver.Chrome("./chromedriver")
         self.base_url = "https://github.com"
 
 
